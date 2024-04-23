@@ -1,0 +1,103 @@
+# Saturday, 13th April
+
+f = open('chai.py)
+
+f.readline()
+
+f.readline()
+
+f.readline()
+
+# readline() method માં અગર file માં બધી જ line read થઈ ગઈ હોય તો empty strings return કરે 
+
+f = open('chai.py) # આ line માં ફરી પાછું આ code લખ્યો છે એનો મતલબ terminal ની અંદર ફરી પાછી file reload કરવામાં આવે છે 
+
+f.__next__() # આ method પણ readline() જેવી જ છે પણ આ RAW રીત છે એટલે કે file આખી અગર read થઈ જાય તો crash થઈ જશે પણ એના બદલે અગર readline() method હોય તો empty string return કરે 
+
+# loops iterable tools કેવાય python ની અંદર એટલે કે loops ને પેલે થી જ સમજાવેલ છે કે file end થાય રો એને કેવી રીતે handle કરવી   
+
+for line in open('chai.py').readlines() # .readlines() method નો ઉપયોગ થતો પેલા પણ આ method memory ઉપર ભારે પડે એટલે હવે આનો ઉપયોગ બંધ થઈ ગયો છે 
+
+for line in opne('chai.py'):
+    print(line)
+
+for line in opne('chai.py'):
+    print(line, end='')
+
+# while loop ની અંદર આ જ વસ્તુ કરાવવી હોય તો syntax ઠોંળો બદલાય જાય  ⬇️ 
+
+while True:
+    line = f.readline()
+    if not line: break
+    print(line, end='')
+
+# નીચે દર્શાવેલ example માં સમજાવ્યું છે કે if not test condition આપી છે તો એ test માં check કરવા જશે કે શું test ની અંદર કઈ નથી તો કે ના એટલે condition ખોટી પડસે તો કઈ જ print નઇ થાય એવી જ રીતે એની નીચે ફરી પાછું એ જ statement લખેલ છે જેમાં test ની અંદર કઈ પણ આપ્યુ નથી તો condition True પડસે એટલે પ્રિન્ટ થઈ જશે  
+
+test = "Divyansh"
+if not test:
+    print("empty")
+
+test = ""
+if not test:
+    print("empty")
+
+
+# list 
+
+myList = [1, 2, 3, 4]
+
+I = iter(myList) # આ line ની અંદર iter() function અથવા તો method કઈ સકીએ એનો ઉપયોગ કરવામાં આવેલ છે જેના થી memory  ની અંદર નવું reference કઈ ના બને એના બદલે direct point કરી દીએ list ઉપર જ  
+
+print(I)
+
+I.__next__ # __next__ method નો ઉપયોગ કરી આપડે list ની અંદર થી એક એક કરી ને values fetch કરી સકીએ 
+
+I.__next__
+
+I.__next__
+
+I.__next__
+
+f = open('chai.py') 
+
+iter(f) # ઉપર દર્શાવેલ example માં કેવી રીતે "I = iter(myList)" iter(myList) ને I ની અંદર સ્ટોર કરાવવું પડ્યું પણ file માં એવું કઈ કરાવવાની જરૂર ના પડે એમાં આપડે directly જે લખી સકીએ એ નીચે દર્શાવેલ છે  ⬇️
+
+iter(f) is f # આ line માં પૂછ્યું છે કે શું iter(f) અને f બંને એક સરખા છે તો એનો જવાબ આવશે હ બંને એક સરખા છે એટલે કે True
+
+iter(f) is f.__next__ # એવી જ રીતે આયા પૂછ્યું છે કે શું iter(f) અને f.__next__ બંને એક સરખા છે તો એનો જવાબ ભી આવશે હા એટલે કે True 
+
+# ઉપર દર્શાવેલ જે example છે એ file માટે જ માન્ય છે list માટે માન્ય નથી જેના examples નીચે દર્શાવેલ છે ⬇️ 
+
+myNewList = [1, 2, 3]
+
+I = iter(myNewList) is myNewList # આ લઈને માં પૂછ્યું છે કે શું iter(myNewList) અને myNewList બંને એક સરખા છે તો જવાબ આવશે ના એટલે કે False 
+
+# dictionary પણ iterable હોય છે 
+
+D = {'a': 1, 'b': 2}
+
+for key in D.keys():
+    print(key)
+
+I = iter(D)
+
+next(I) # __next__ અને next() બંને એક જ છે 
+
+next(I)
+
+range(5)
+
+R = range(5)
+
+I = iter(R)
+
+next(I)
+
+next(I)
+
+next(I)
+
+next(I)
+
+next(I)
+
